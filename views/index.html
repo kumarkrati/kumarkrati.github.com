@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../static/css/resume.css">
+    <link rel="icon" href="../static/images/asterisk-alt.png" />
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="../static/js/portfolio.js"></script>
+    
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <meta content="">
+    <script type="text/javascript">
+    $(document).ready(function() {
+   
+      
+   $("html").niceScroll({cursorborder:"#ccc",cursorcolor:"#000",boxzoom:true,touchbehavior:false}); // First scrollable DIV
+   $('.helloMenu').addClass('menuSeleceted');
+   if((isScrolledIntoView('#work'))){
+         rotate();
+          $('.menuSeleceted').removeClass('menuSeleceted');
+           $('.workMenu').addClass('menuSeleceted');
+
+        }
+  var native_width = 0;
+  var native_height = 0;
+  $(".mac").mouseover(function(){
+    $('.view').css('opacity','0');
+    $(this).find('.view').css('opacity','1');
+  });
+  $(".mac").mouseleave(function(){
+    $('.view').css('opacity','0');
+   
+  });
+/*  //Now the mousemove function
+  $(".mac").mousemove(function(e){
+   // $(".large").css('left',$(this).position().left);
+    //When the user hovers on the image, the script will first calculate
+    //the native dimensions if they don't exist. Only after the native dimensions
+    //are available, the script will show the zoomed version.
+    if(!native_width && !native_height)
+    {
+      //This will create a new image object with the same image as that in .small
+      //We cannot directly get the dimensions from .small because of the 
+      //width specified to 200px in the html. To get the actual dimensions we have
+      //created this image object.
+      var image_object = new Image();
+      image_object.src = $(".small").attr("src");
+      
+      //This code is wrapped in the .load function which is important.
+      //width and height of the object would return 0 if accessed before 
+      //the image gets loaded.
+      native_width = image_object.width;
+      native_height = image_object.height;
+    }
+    else
+    {
+      //x/y coordinates of the mouse
+      //This is the position of .magnify with respect to the document.
+      var magnify_offset = $(this).offset();
+      //We will deduct the positions of .magnify from the mouse positions with
+      //respect to the document to get the mouse positions with respect to the 
+      //container(.magnify)
+      var mx = e.pageX - magnify_offset.left;
+      var my = e.pageY - magnify_offset.top;
+      
+      //Finally the code to fade out the glass if the mouse is outside the container
+      if(mx < $(this).width() && my < $(this).height() && mx > 0 && my > 0)
+      {
+        $(".large").fadeIn(100);
+      }
+      else
+      {
+        $(".large").fadeOut(100);
+      }
+      if($(".large").is(":visible"))
+      {
+        //The background position of .large will be changed according to the position
+        //of the mouse over the .small image. So we will get the ratio of the pixel
+        //under the mouse pointer with respect to the image and use that to position the 
+        //large image inside the magnifying glass
+        var rx = Math.round(mx/$(".small").width()*native_width - $(".large").width()/2)*-1;
+        var ry = Math.round(my/$(".small").height()*native_height - $(".large").height()/2)*-1;
+        var bgp = rx + "px " + ry + "px";
+        
+        //Time to move the magnifying glass with the mouse
+        var px = mx - $(".large").width()/2;
+        var py = my - $(".large").height()/2;
+        //Now the glass moves with the mouse
+        //The logic is to deduct half of the glass's width and height from the 
+        //mouse coordinates to place it with its center at the mouse coordinates
+        
+        //If you hover on the image now, you should see the magnifying glass in action
+        $(".large").css({left: px, top: py, backgroundPosition: bgp});
+      }
+    }
+  })*/
+  
+  $window = $(window);
+                
+   $('section[data-type="background"]').each(function(){
+     var $bgobj = $(this); // assigning the object
+     
+      $(window).scroll(function() {
+         
+        if(isScrolledIntoView('#about')){
+          $('#about').find('img').css('top','100');
+          $('.header').show();
+          $('.leftBrain').addClass('move');
+          $('.rightBrain').addClass('moveR');
+           $('.techSkills').find('p').show();
+           $('.menuSeleceted').removeClass('menuSeleceted');
+           $('.aboutMenu').addClass('menuSeleceted');
+        };
+        
+        if(!(isScrolledOutsideView('#home'))){
+         $('.header').css('position','fixed');
+
+
+        }
+        else{
+           $('.header').css('position','relative');
+           $('.menuSeleceted').removeClass('menuSeleceted');
+           $('.aboutMenu').addClass('menuSeleceted');
+           
+        }
+         if((isScrolledIntoView('#work'))){
+         rotate();
+          $('.menuSeleceted').removeClass('menuSeleceted');
+           $('.workMenu').addClass('menuSeleceted');
+
+        }
+       
+        if(isScrolledIntoView('#contact')){
+          $('.menuSeleceted').removeClass('menuSeleceted');
+           $('.contactMenu').addClass('menuSeleceted');
+        }
+        
+    // Scroll the background at var speed
+    // the yPos is a negative value because we're scrolling it UP!                
+    var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+    
+    // Put together our final background position
+    var coords = '50% '+ yPos + 'px';
+
+    // Move the background
+    $bgobj.css({ backgroundPosition: coords });
+    //console.log($bgobj.next().attr('id'));
+    $('#mouseicon').css('opacity','0');
+    if(!$(window).scrollTop()) { //abuse 0 == false :)
+         $('.header').css('position','relative');
+         $('#mouseicon').css('opacity','1');
+         $('.mac').css('-webkit-transform','scale(0)');
+         $('.move').removeClass('move');
+         $('.moveR').removeClass('moveR');
+         count=0;
+}
+   // $bgobj.css({ '-webkit-filter': 'blur(7px)'});
+    
+}); // window scroll Ends
+
+ });  
+
+
+  });
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+  //  console.log(elemTop +'|'+docViewBottom +'|'+docViewTop )
+    return ((Math.ceil(elemTop) < Math.ceil(docViewBottom))&& (Math.ceil(elemTop) >= Math.ceil(docViewTop)) );
+}
+function isScrolledOutsideView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+  //  console.log(elemTop +'|'+docViewBottom +'|'+docViewTop )
+    return ((Math.ceil(elemBottom) < Math.ceil(docViewBottom))&& (Math.ceil(elemBottom) >= Math.ceil(docViewTop)) );
+}
+function open2(url) {
+
+  window.location = url;
+}
+
+
+    </script>
+  </head>
+  <body>
+  	<div class="outerWrapper">
+  		<div class="wrapper">
+  			<!-- <div class="loading-wrap">
+  <div class="triangle1"></div>
+  <div class="triangle2"></div>
+  <div class="triangle3"></div>
+</div> -->
+
+  		
+<section id="home" class="scrollingDiv" data-type="background" data-speed="10">  
+ <article>   
+<p style="font-size: 37px;color: #fff;position: absolute;top: 68%;width: 100%;text-align: center;">Hello I'm KK, a 22 year old<br /> Front End Developer from Rajasthan.<br /</p>
+<div class="loading"></div>                       
+ </article>
+ <div id="mouseicon" class="dynamicscroll" style="display: inline-block;">
+        <div class="mousescroll1 mouseanim one"></div>
+        <div class="mousescroll2 mouseanim two"></div>
+        <div class="mousescroll3 mouseanim three"></div>
+      </div>
+</section>   
+    
+<section id="about" class="scrollingDiv" data-type="background" data-speed="10">
+   <div class="header" style="" >
+    <a href="#home"><p class="helloMenu" style="margin-left:30%;">HELLO</p></a>
+    <a href="#about"><p class="aboutMenu">SKILLS</p></a>
+    <span>*</span>
+    <a href="#work"><p class="workMenu">WORK</p></a>
+    <a href="#contact"><p class="contactMenu">CONTACT</p></a>
+  </div>
+  <article>
+<!-- <div class="techSkills">
+<p>HTML5</p>
+<p>CSS3</p>
+<p>jQuery</p>
+<p>JAVASCRIPT</p>
+<p>PYTHON</p>
+<p>JAVA</p>
+</div>
+<img class="leftBrain brain" style="left:0px;"  src="../static/images/L.png" />
+<img class="rightBrain brain" style="right:0px;" src="../static/images/R.png" />
+<div class="otherSkills">
+<p>PHOTOGRAPHY</p>
+<p>GUITAR</p>
+<p>BASKETBALL</p>
+<p>PHOTOSHOP</p>
+<p>DANCING</p>
+<p>PARTYING</p>
+</div> -->
+<div class="solarMain">
+<div class="solarOuter">
+<!-- <img src="../static/images/solar-system.png"> -->
+</div>
+<div id="solarDisplay">
+<div class="sun-glow"><div class="sun-glow-display"></div></div>
+
+</div>
+<div class="solar-expand">
+  <ul class="skillsDesc">
+    <li>
+      <label style="background-color: #2ecc71;"></label>
+      <p>HTML 4/5</p>
+    </li>
+     <li>
+      <label style="background-color: #9b59b6;"></label>
+      <p>CSS 2/3</p>
+    </li>
+     <li>
+      <label style="background-color: #06c;"></label>
+      <p>JQUERY</p>
+    </li>
+     <li>
+      <label style="background-color: #aa4200;"></label>
+      <p>JAVASCRIPT</p>
+    </li>
+     <li>
+      <label style="background-color: #e74c3c;"></label>
+      <p>MOBILE & RESPONSIVE</p>
+    </li>
+     <li>
+      <label style="background-color: #bdc3c7;"></label>
+      <p>PYTHON</p>
+    </li>
+     <li>
+      <label style="background-color: #FF66CC;"></label>
+      <p>JAVA</p>
+    </li>
+     <li>
+      <label style="background-color: #77c2ec;"></label>
+      <p>STRATEGY & CONSULTING</p>
+    </li>
+     <li>
+      <label style="background-color: #7c6a5c;"></label>
+      <p>PHOTOSHOP</p>
+    </li>
+
+  </ul>
+<ul class="solarsystem">
+          <li class="sun"><a href="#sun"><span>Sun</span></a></li>
+          <li class="mercury"><a href="#mercury"><span>Mercury</span></a></li>
+          <li class="venus"><a href="#venus"><span>Venus</span></a></li>
+          <li class="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
+          <li class="mars"><a href="#mars"><span>Mars</span></a></li>
+          <li class="asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
+          <li class="jupiter"><a href="#jupiter"><span>Jupiter</span></a></li>
+          <li class="saturn"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
+          <li class="uranus"><a href="#uranus"><span>Uranus</span></a></li>
+          <li class="neptune"><a href="#neptune"><span>Neptune</span></a></li>
+          <li class="pluto"><a href="#pluto"><span>Pluto</span></a></li>
+        </ul>
+
+
+
+</div>
+</div>
+  </article>
+</section> 
+
+<section id="work" class="scrollingDiv" data-type="background" data-speed="10">
+  <article>
+    <div class="workDetails">
+      <div class="mac m1" onclick="open2('/home/kk/portfolio/views/niveagosleeveless.html')">
+        <!--   <div class="large"></div> -->
+        <img class="small" src="../static/images/mac.png">
+        <div class="workOut">
+        <img src="../static/images/work/rocking.png">
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+      <p>NIVEA - Go Sleeveless</p>
+      </div>
+      <div class="mac m2" onclick="open2('/home/kk/portfolio/views/officialclt20fantasyleague.html')">
+        <img class="small" src="../static/images/mac.png">
+        <div class="workOut">
+        <img src="../static/images/work/clt202.png">
+      </div>
+
+        <img class="small ipad" src="../static/images/ipad.png">
+        <div class="workOutIpad">
+        <img src="../static/images/work/1.png">
+        <div class="view" style="left: 0px;top: 0px;width: 100%;height: 100%;">
+        <img src="../static/images/icon.png" style="left: -66px;width: 43px;margin-top: 25px;" />
+         <p style="font-size: 15px;margin-top: 2px;">View Work</p>
+      </div>
+      </div>
+
+        <img class="small iphone" src="../static/images/phone.png">
+        <div class="workOutIphone">
+        <img src="../static/images/work/1.png">
+        <div class="view" style="left: 0px;top: 0px;width: 100%;height: 100%;">
+        <img src="../static/images/icon.png" style="left: -76px;width: 30px;margin-top: 20px;" />
+         <p style="font-size: 12px;margin-top: 2px;margin-left: 1px">View Work</p>
+      </div>
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+       <p>Official CLT20 Fantasy League</p>
+
+      </div>
+      <div class="mac m3" onclick="open2('/home/kk/portfolio/views/niveaarmprint.html')">
+        <img  class="small" src="../static/images/mac.png">
+        <div class="workOut">
+        <img src="../static/images/work/arm.jpg">
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+       <p>NIVEA - Armprint</p>
+      </div>
+      <div class="mac m4" onclick="open2('/home/kk/portfolio/views/nivearocktheramp.html')">
+        <img  class="small" src="../static/images/mac.png">
+         <div class="workOut">
+        <img src="../static/images/work/sizzle.png">
+      </div>
+      <img class="small ipad" src="../static/images/ipad.png">
+        <div class="workOutIpad">
+        <img src="../static/images/work/sms.png">
+         <div class="view" style="left: 0px;top: 0px;width: 100%;height: 100%;">
+        <img src="../static/images/icon.png" style="left: -66px;width: 43px;margin-top: 25px;" />
+         <p style="font-size: 15px;margin-top: 2px;">View Work</p>
+      </div>
+      </div>
+
+        <img class="small iphone" src="../static/images/phone.png">
+        <div class="workOutIphone">
+        <img src="../static/images/work/sms.png">
+        <div class="view" style="left: 0px;top: 0px;width: 100%;height: 100%;">
+        <img src="../static/images/icon.png" style="left: -76px;width: 30px;margin-top: 20px;" />
+         <p style="font-size: 12px;margin-top: 2px;margin-left: 1px">View Work</p>
+      </div>
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+       <p>NIVEA - Rock The Ramp</p>
+      </div>
+      <div class="mac m5" onclick="open2('/home/kk/portfolio/views/tripalong.html')">
+        <img  class="small" src="../static/images/mac.png">
+         <div class="workOut">
+        <img src="../static/images/work/tripalong.png">
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+      <p>MakeMyTrip- Tripalong</p>
+      </div>
+      <div class="mac m6" onclick="open2('/home/kk/portfolio/views/officialiplfantasyleague.html')">
+        <img  class="small" src="../static/images/mac.png">
+        <div class="workOut">
+        <img src="../static/images/work/001.png">
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+      <p>Official IPL Fantasy League</p>
+      </div>
+      <div class="mac m7" onclick="open2('/home/kk/portfolio/views/niveaahdeo.html')">
+        <img  class="small" src="../static/images/mac.png">
+        <div class="workOut">
+        <img src="../static/images/work/ahdeo.jpg">
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+       <p>NIVEA - Ah-Deo</p>
+      </div>
+      <div class="mac m8" onclick="open2('/home/kk/portfolio/views/niveasharenshop.html')">
+        <img  class="small" src="../static/images/mac.png">
+        <div class="workOut">
+        <img src="../static/images/work/sharenshop.png">
+      </div>
+      <div class="view">
+        <img src="../static/images/icon.png" />
+        <p>View Work</p>
+      </div>
+       <p>NIVEA - Share n Shop</p>
+      </div>
+
+    </div>
+  </article>
+</section> 
+<section id="contact" class="scrollingDiv" data-type="background" data-speed="10">
+  <article>
+    <div id="contactBg"></div>
+    <p>CONTACT</p>
+    <span>Let's work together, get in touch with me below.</span>
+    <div class="socialFb" style="margin-left: 29.5%;margin-right: 8%;" onclick="open2('https://www.facebook.com/kumarkrati')"  ></div>
+    <div class="socialTwit"style="margin-right: 8%;" onclick="open2('https://twitter.com/KumarKrati')"></div>
+    <div class="socialLink" onclick="open2('http://www.linkedin.com/in/kumarkrati')"></div>
+    <!-- <div class="socialTwit"></div>
+    <div class="socialFb"></div> -->
+   <!--  <img src="../static/images/social-linkedin.png" />
+    <img src="../static/images/social-twitter.png" />
+    <img src="../static/images/in.png" /> -->
+     <span>OR</span>
+      <span>Let's work together, get in touch with me below.</span>
+  </article>
+<!--   <div class="line"></div> -->
+  <div class="dwnResume">
+
+    Download Resume</div>
+</section> 
+
+  	</div>
+</div>
+
+  </body>
+</html>
