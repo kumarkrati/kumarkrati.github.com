@@ -1,4 +1,4 @@
 kumarkrati.github.com
 =====================
 
-Kumar Krati Gupta portfolio
+Kumar Krati Gupta's portfolio
