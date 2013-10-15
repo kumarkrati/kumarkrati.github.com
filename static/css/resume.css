@@ -190,6 +190,7 @@ background-size: 284% 196%;
   margin: 0 auto; 
   width: 100%; 
   max-width: 1920px;
+  height: 1000px; 
   position: relative; 
   transition: all 250ms ease;
 }
@@ -207,6 +208,7 @@ background-size: 284% 196%;
  /*background: url('../images/watercolor-main.png') no-repeat;*/ 
  background: url('../images/contact-bg.jpg') repeat;
  background-color: #bd0000;
+  height: 1000px;
   margin: 0 auto; 
   width: 100%; 
   max-width: 1920px; 
@@ -216,7 +218,8 @@ background-size: 284% 196%;
 }
  #work{
   background: url('../images/disciplines-bg.jpg') repeat;
-   background-color: #ccc; 
+   background-color: #ccc;
+  height: 1000px;
   margin: 0 auto; 
   width: 100%; 
   max-width: 1920px; 
@@ -230,6 +233,7 @@ background-size: 284% 196%;
   background-size: 100%;
   background-position: 50%;
    background-color: #ccc;
+  height: 1000px; 
   margin: 0 auto; 
   width: 100%; 
   max-width: 1920px; 
