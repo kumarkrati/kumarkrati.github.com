@@ -346,6 +346,7 @@ animation-delay: .7s;
   background-color:#000;
   top:0;
   z-index: 999;
+  float: left;
 }
 .header img{
   width: 60px;
