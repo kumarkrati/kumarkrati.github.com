@@ -525,19 +525,21 @@ width: 100%;
 }
 ul.solarsystem {
     position: relative;
-    height: 640px;
-    list-style: none;
-    -webkit-transition: all 0.09s ease-in;
-    -moz-transition: all 0.09s ease-in;
-    -o-transition: all 0.09s ease-in;
-    transition: all 0.09s ease-in;
-    /*overflow: hidden;*/
-   position: relative;
-width: 62%;
+height: 640px;
+list-style: none;
+-webkit-transition: all 0.09s ease-in;
+-moz-transition: all 0.09s ease-in;
+-o-transition: all 0.09s ease-in;
+transition: all 0.09s ease-in;
+overflow: hidden;
+position: relative;
+width: 763px;
 margin: 0 auto;
-  background: url('../images/title.png') no-repeat;
-    background-position: center 50%;
-    margin-top: -8%;
+background: url('../images/title.png') no-repeat;
+background-position: 82% 50%;
+margin-top: -7%;
+overflow: hidden;
+display: inline-block;
 }
 ul.solarsystem li {
     text-indent: -9999px;
