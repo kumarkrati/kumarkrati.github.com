@@ -515,9 +515,7 @@ z-index: 4;
   position: relative;
   margin: 0 auto;
   width: 100%;
-   background: url('../images/title.png') no-repeat;
-    height: 100%;
-    background-position: center 90%;
+ 
 }
 .solarOuter{
   position: absolute;
@@ -532,10 +530,13 @@ ul.solarsystem {
     -moz-transition: all 0.09s ease-in;
     -o-transition: all 0.09s ease-in;
     transition: all 0.09s ease-in;
-    overflow: hidden;
+    /*overflow: hidden;*/
    position: relative;
 width: 62%;
 margin: 0 auto;
+  background: url('../images/title.png') no-repeat;
+    background-position: center 50%;
+    margin-top: -4%;
 }
 ul.solarsystem li {
     text-indent: -9999px;
@@ -1157,4 +1158,7 @@ background-repeat: no-repeat;
   position: relative;
   float: left;
   width: 100%;
+}
+.scrollingDiv{
+  float: left;
 }
