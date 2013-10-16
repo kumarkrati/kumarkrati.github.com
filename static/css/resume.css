@@ -591,8 +591,8 @@ ul.solarsystem li.sun {
         rgb(204,153,0) 22%,
         rgb(255,219,112) 100%
     );
-    top: 314px;
-    left: 472px;
+    top: 296px;
+    left: 454px;
     border: none;
     -webkit-box-shadow: 0 0 50px #c90;
     -moz-box-shadow: 0 0 50px #c90;
@@ -623,7 +623,7 @@ ul.solarsystem li.mercury {
 ul.solarsystem li.mercury span {
     background: #2ecc71;
     top: 10px;
-    left: 5px;
+    left: -5px;
 }
 ul.solarsystem li.venus {
     width: 140px;
@@ -638,7 +638,7 @@ ul.solarsystem li.venus {
 ul.solarsystem li.venus span {
     background: #9b59b6;
     top: 118px;
-    left: -2px;
+    left: 20px;
 }
 ul.solarsystem li.earth {
     width: 200px;
@@ -653,7 +653,7 @@ ul.solarsystem li.earth {
 ul.solarsystem li.earth span {
     background: #06c;
     top: 56px;
-    left: 2px;
+    left: -4px;
 }
 ul.solarsystem li.earth span.moon {
     width: 10px;
@@ -678,7 +678,7 @@ ul.solarsystem li.mars {
 ul.solarsystem li.mars span {
     background: #aa4200;
     top: 0px;
-    left: 194px;
+    left: 173px;
 }
 ul.solarsystem li.asteroids_meteorids {
     top: 155px;
@@ -705,7 +705,7 @@ ul.solarsystem li.jupiter {
 ul.solarsystem li.jupiter span {
     background: #e74c3c;
     top: 67px;
-    left: 22px;
+    left: 13px;
 }
 ul.solarsystem li.saturn {
     width: 380px;
@@ -720,7 +720,7 @@ ul.solarsystem li.saturn {
 ul.solarsystem li.saturn span {
     background: #bdc3c7;
     top: 24px;
-    left: 316px;
+    left: 290px;
 }
 ul.solarsystem li.saturn span.ring {
     width: 12px;
@@ -750,7 +750,7 @@ ul.solarsystem li.uranus {
 ul.solarsystem li.uranus span {
     background: #f39c12;
     top: 7px;
-    left: 320px;
+    left: 295px;
 }
 ul.solarsystem li.neptune {
     width: 500px;
@@ -765,7 +765,7 @@ ul.solarsystem li.neptune {
 ul.solarsystem li.neptune span {
     background: #FF66CC;
     top: 0px;
-    left: 188px;
+    left: 170px;
 }
 ul.solarsystem li.pluto {
     width: 560px;
@@ -780,7 +780,7 @@ ul.solarsystem li.pluto {
 ul.solarsystem li.pluto span {
     background: #7c6a5c;
     top: 79px;
-    left: 74px;
+    left: 66px;
 }
 
 /* CSS3 Animations */
