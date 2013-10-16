@@ -611,8 +611,8 @@ ul.solarsystem li.sun span {
     border-radius: 30px;   
 }
 ul.solarsystem li.mercury {
-    width: 12%;
-    height: 18.5%;
+    width: 120px;
+    height: 120px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -626,8 +626,8 @@ ul.solarsystem li.mercury span {
     left: 5px;
 }
 ul.solarsystem li.venus {
-    width: 18%;
-    height: 28%;
+    width: 180px;
+    height: 180px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -641,8 +641,8 @@ ul.solarsystem li.venus span {
     left: -2px;
 }
 ul.solarsystem li.earth {
-    width: 24.2%;
-    height: 37%;
+    width: 240px;
+    height: 240px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -666,8 +666,8 @@ ul.solarsystem li.earth span.moon {
     left: 23px;
 }
 ul.solarsystem li.mars {
-    width: 30%;
-    height: 47%;
+    width: 300px;
+    height: 300px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -693,8 +693,8 @@ ul.solarsystem li.asteroids_meteorids {
     border: none;
 }
 ul.solarsystem li.jupiter {
-    width: 36%;
-    height: 57%;
+    width: 360px;
+    height: 360px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -708,8 +708,8 @@ ul.solarsystem li.jupiter span {
     left: 22px;
 }
 ul.solarsystem li.saturn {
-    width: 42%;
-    height: 66%;
+    width: 420px;
+    height: 420px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -738,8 +738,8 @@ ul.solarsystem li.saturn span.ring {
     transform: skewY(50deg);
 }
 ul.solarsystem li.uranus {
-    width: 48%;
-    height: 75%;
+    width: 480px;
+    height: 480px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -753,8 +753,8 @@ ul.solarsystem li.uranus span {
     left: 320px;
 }
 ul.solarsystem li.neptune {
-    width: 54%;
-    height: 84%;
+    width: 540px;
+    height: 540px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -768,8 +768,8 @@ ul.solarsystem li.neptune span {
     left: 188px;
 }
 ul.solarsystem li.pluto {
-    width: 60%;
-    height: 93%;
+    width: 600px;
+    height: 600px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
