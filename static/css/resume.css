@@ -437,10 +437,11 @@ cursor: default;
 }
 
 .workDetails{
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 100%;
+position: relative;
+width: 1200px;
+height: 100%;
+margin: 0 auto;
+display: table;
 
 }
 .mac{
@@ -1164,4 +1165,10 @@ background-repeat: no-repeat;
 }
 .scrollingDiv{
   float: left;
+}
+.socialOuter {
+position: relative;
+width: 472px;
+display: table;
+margin: 0 auto;
 }
