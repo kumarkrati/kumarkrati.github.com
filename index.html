@@ -180,7 +180,7 @@ jQuery.fn.center = function(parent) {
         parent = window;
     }
     this.css({
-        "margin-top": (-(($(parent).height()/2 - this.outerHeight()) / 2)/2),
+        "margin-top": ((($(parent).height() - this.outerHeight())/2)/2),
         //"left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
     });
 return this;
@@ -227,8 +227,9 @@ function open2(url) {
 <section id="home" class="scrollingDiv" data-type="background" data-speed="10">  
  <article>  
  <div class="wrapOuter"> 
-<p style="font-size: 37px;color: #fff;position: absolute;top: 68%;width: 100%;text-align: center;">Hello I'm KK, a 22 year old<br /> Front End Developer from Rajasthan.<br /</p>
-<div class="loading"></div>                       
+  <div class="loading"></div>  
+<p style="font-size: 37px;color: #fff;position: relative;width: 100%;text-align: center;margin-top:40px;">Hello I'm KK, a 22 year old<br /> Front End Developer from Rajasthan.<br /</p>
+                     
  </article>
  <div id="mouseicon" class="dynamicscroll" style="display: inline-block;">
         <div class="mousescroll1 mouseanim one"></div>
