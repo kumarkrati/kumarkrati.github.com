@@ -436,7 +436,9 @@ position: relative;
 width: 1200px;
 height: 100%;
 margin: 0 auto;
-display: table;
+display: block;
+padding-top: 30px;
+padding-bottom: 30px;
 
 }
 .mac{
@@ -932,6 +934,7 @@ text-align: left;
 color: #fff;
 float: left;
 margin-left: 5%;
+margin-top: 150px;
 }
 .skillsDesc li{
   width: 100%;
