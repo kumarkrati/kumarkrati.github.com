@@ -19,11 +19,11 @@
    $('.helloMenu').addClass('menuSeleceted');
     $('.scrollingDiv:not(#work)').css('height',$(window).height()+'px');
     $('#work').css('min-height',$(window).height()+'px');
-    $(".wrapOuter").center(true);
-    /*var h = $('.scrollingDiv').height();
-    var h1 = $('.wrapOuter').outerHeight();
-    var h2 = (h-h1)/2;
-    $('.wrapOuter').css('margin-top',h2)+'px';*/
+    /*$(".wrapOuter").center(true);*/
+    center('#home');
+    center('#about');
+    center('#work');
+    center('#contact');
    
    if((isScrolledIntoView('#work'))){
          rotate();
@@ -172,21 +172,26 @@
 
 
   });
-
-jQuery.fn.center = function(parent) {
+function center(elem){
+  var h = $(elem).height();
+    var h1 = $(elem).find('.wrapOuter').outerHeight();
+    var h2 = (h-h1)/2;
+    $(elem).find('.wrapOuter').css('margin-top',h2)+'px';
+}
+/*jQuery.fn.center = function(parent) {
     if (parent) {
         parent = this.parent().parent();
     } else {
         parent = window;
     }
     this.css({
-        "margin-top": ((($(parent).height() - this.outerHeight())/2)/2),
+        "margin-top": ((($(parent).height() - this.outerHeight()))/2),
         //"left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
     });
 return this;
 }
 
-function isScrolledIntoView(elem)
+*/function isScrolledIntoView(elem)
 {
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
@@ -236,7 +241,7 @@ function open2(url) {
         <div class="mousescroll2 mouseanim two"></div>
         <div class="mousescroll3 mouseanim three"></div>
       </div>
-    </div>
+    
 </section>   
       <div class="header" style="" >
     <a href="#home"><p class="helloMenu" style="margin-left:30%;">HELLO</p></a>
@@ -324,7 +329,7 @@ function open2(url) {
   <article>
     <div class="wrapOuter">
     <div class="workDetails">
-      <div class="mac m1" onclick="open2('/views/niveagosleeveless.html')">
+      <div class="mac m1" onclick="open2('/views/niveagosleeveless.html')" style="margin-top: 0;">
         <!--   <div class="large"></div> -->
         <img class="small" src="../static/images/mac.png">
         <div class="workOut">
@@ -336,7 +341,7 @@ function open2(url) {
       </div>
       <p>NIVEA - Go Sleeveless</p>
       </div>
-      <div class="mac m2" onclick="open2('/views/officialclt20fantasyleague.html')">
+      <div class="mac m2" onclick="open2('/views/officialclt20fantasyleague.html')" style="margin-top: 0;">
         <img class="small" src="../static/images/mac.png">
         <div class="workOut">
         <img src="../static/images/work/clt202.png">
@@ -366,7 +371,7 @@ function open2(url) {
        <p>Official CLT20 Fantasy League</p>
 
       </div>
-      <div class="mac m3" onclick="open2('/views/niveaarmprint.html')">
+      <div class="mac m3" onclick="open2('/views/niveaarmprint.html')" style="margin-top: 0;">
         <img  class="small" src="../static/images/mac.png">
         <div class="workOut">
         <img src="../static/images/work/arm.jpg">
@@ -469,8 +474,8 @@ function open2(url) {
    <!--  <img src="../static/images/social-linkedin.png" />
     <img src="../static/images/social-twitter.png" />
     <img src="../static/images/in.png" /> -->
-     <span>OR</span>
-      <span>Let's work together, get in touch with me below.</span>
+
+      <span style="margin-top:15px;">And here's my traditional resume</span>
   </article>
 <!--   <div class="line"></div> -->
   <div class="dwnResume">
@@ -478,7 +483,7 @@ function open2(url) {
     Download Resume</div>
   </div>
 </section> 
-
+</div>
     </div>
 </div>
 

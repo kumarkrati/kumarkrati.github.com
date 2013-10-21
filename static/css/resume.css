@@ -196,10 +196,8 @@ background-size: 284% 196%;
 }
  
 #home article { 
-  height: 458px; 
   position: absolute; 
   text-align: center; 
-  top: 150px; 
   width: 100%; 
   transition: all 250ms ease;
 }
@@ -256,7 +254,6 @@ background-size: 284% 196%;
   text-align: center;
   position: relative;
   float: left;
-  margin-top: 90px;
  }
  #contact span{
   color: #000;
@@ -269,10 +266,8 @@ background-size: 284% 196%;
  }
 
 #about article { 
-  height: 458px; 
   position: absolute; 
   text-align: center; 
-  top: 150px; 
   width: 100%; 
    transition: all 250ms ease;
 }
@@ -514,10 +509,17 @@ z-index: 4;
   width: 100%;
 }
 .solarMain{
+position: relative;
+margin: 0 auto;
+width: 100%;
+height: 100%;
+}
+.solar-expand{
   position: relative;
-  margin: 0 auto;
-  width: 100%;
- 
+float: left;
+width: 100%;
+margin: 0 auto;
+display: block;
 }
 .solarOuter{
   position: absolute;
@@ -525,22 +527,21 @@ width: 100%;
 
 }
 ul.solarsystem {
-    position: relative;
+position: relative;
 height: 640px;
-list-style: none;
 -webkit-transition: all 0.09s ease-in;
 -moz-transition: all 0.09s ease-in;
 -o-transition: all 0.09s ease-in;
 transition: all 0.09s ease-in;
 overflow: hidden;
-position: relative;
 width: 763px;
 margin: 0 auto;
 background: url('../images/title.png') no-repeat;
 background-position: 82% 50%;
-margin-top: -7%;
 overflow: hidden;
-display: inline-block;
+display: block;
+float: left;
+margin-top: -2%;
 }
 ul.solarsystem li {
     text-indent: -9999px;
@@ -924,13 +925,13 @@ ul.solarsystem li.pluto {-webkit-animation-duration:120s; -moz-animation-duratio
 
 
 .skillsDesc{ 
-  position: absolute;
-  left: 5%;
-  width: 171px;
-  height: auto;
-  text-align: left;
-  color: #fff;
-  margin-top: 3%;
+position: relative;
+width: 15%;
+height: auto;
+text-align: left;
+color: #fff;
+float: left;
+margin-left: 5%;
 }
 .skillsDesc li{
   width: 100%;
@@ -1177,7 +1178,11 @@ display: table;
 margin: 0 auto;
 }
 .wrapOuter{
- clear: both;
-    content: "";
-    display: block;
+clear: both;
+content: "";
+display: block;
+position: relative;
+float: left;
+margin: 0 auto;
+width: 100%;
 }
