@@ -19,6 +19,11 @@
    $('.helloMenu').addClass('menuSeleceted');
     $('.scrollingDiv:not(#work)').css('height',$(window).height()+'px');
     $('#work').css('min-height',$(window).height()+'px');
+    /*var h = $('.scrollingDiv').height();
+    var h1 = $('.wrapOuter').outerHeight();
+    var h2 = (h-h1)/2;
+    $('.wrapOuter').css('margin-top',h2)+'px';*/
+   
    if((isScrolledIntoView('#work'))){
          rotate();
           $('.menuSeleceted').removeClass('menuSeleceted');
@@ -166,6 +171,20 @@
 
 
   });
+
+jQuery.fn.center = function(parent) {
+    if (parent) {
+        parent = this.parent().parent();
+    } else {
+        parent = window;
+    }
+    this.css({
+        "margin-top": (-(($(parent).height()/2 - this.outerHeight()) / 2)/2),
+        //"left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
+    });
+return this;
+}
+
 function isScrolledIntoView(elem)
 {
     var docViewTop = $(window).scrollTop();
@@ -205,7 +224,8 @@ function open2(url) {
 
       
 <section id="home" class="scrollingDiv" data-type="background" data-speed="10">  
- <article>   
+ <article>  
+ <div class="wrapOuter"> 
 <p style="font-size: 37px;color: #fff;position: absolute;top: 68%;width: 100%;text-align: center;">Hello I'm KK, a 22 year old<br /> Front End Developer from Rajasthan.<br /</p>
 <div class="loading"></div>                       
  </article>
@@ -214,6 +234,7 @@ function open2(url) {
         <div class="mousescroll2 mouseanim two"></div>
         <div class="mousescroll3 mouseanim three"></div>
       </div>
+    </div>
 </section>   
       <div class="header" style="" >
     <a href="#home"><p class="helloMenu" style="margin-left:30%;">HELLO</p></a>
@@ -225,24 +246,8 @@ function open2(url) {
 <section id="about" class="scrollingDiv" data-type="background" data-speed="10">
  
   <article>
-<!-- <div class="techSkills">
-<p>HTML5</p>
-<p>CSS3</p>
-<p>jQuery</p>
-<p>JAVASCRIPT</p>
-<p>PYTHON</p>
-<p>JAVA</p>
-</div>
-<img class="leftBrain brain" style="left:0px;"  src="../static/images/L.png" />
-<img class="rightBrain brain" style="right:0px;" src="../static/images/R.png" />
-<div class="otherSkills">
-<p>PHOTOGRAPHY</p>
-<p>GUITAR</p>
-<p>BASKETBALL</p>
-<p>PHOTOSHOP</p>
-<p>DANCING</p>
-<p>PARTYING</p>
-</div> -->
+    <div class="wrapOuter">
+
 <div class="solarMain">
 <div class="solarOuter">
 <!-- <img src="../static/images/solar-system.png"> -->
@@ -309,11 +314,13 @@ function open2(url) {
 
 </div>
 </div>
+</div>
   </article>
 </section> 
 
 <section id="work" class="scrollingDiv" data-type="background" data-speed="10">
   <article>
+    <div class="wrapOuter">
     <div class="workDetails">
       <div class="mac m1" onclick="open2('/views/niveagosleeveless.html')">
         <!--   <div class="large"></div> -->
@@ -440,13 +447,14 @@ function open2(url) {
       </div>
        <p>NIVEA - Share n Shop</p>
       </div>
-
+    </div>
     </div>
   </article>
 </section> 
 <section id="contact" class="scrollingDiv" data-type="background" data-speed="10">
   <article>
     <div id="contactBg"></div>
+    <div class="wrapOuter">
     <p>CONTACT</p>
     <span>Let's work together, get in touch with me below.</span>
     <div class="socialOuter">
@@ -466,6 +474,7 @@ function open2(url) {
   <div class="dwnResume">
 
     Download Resume</div>
+  </div>
 </section> 
 
     </div>
