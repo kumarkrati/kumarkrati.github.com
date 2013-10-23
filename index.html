@@ -26,6 +26,7 @@
     center('#about');
     center('#work');
     center('#contact');
+    centerLeft('#aboutMenu');
    
    if((isScrolledIntoView('#work'))){
          rotate();
@@ -180,6 +181,12 @@ function center(elem){
     var h2 = (h-h1)/2;
     $(elem).find('.wrapOuter').css('margin-top',h2)+'px';
 }
+function centerLeft(elem){
+   var w = $(elem).width();
+    var w1 = $(elem).find('.wrapOuter').outerWidth();
+    var w2 = (w-w1)/2;
+    $(elem).find('.wrapOuter').css('margin-left',w2)+'px';
+}
 /*jQuery.fn.center = function(parent) {
     if (parent) {
         parent = this.parent().parent();
@@ -255,7 +262,7 @@ function open2(url) {
 <section id="about" class="scrollingDiv" data-type="background" data-speed="10">
  
   <article>
-    <div class="wrapOuter">
+    <div class="wrapOuter" style="width:1200px;">
 
 <div class="solarMain">
 <div class="solarOuter">
