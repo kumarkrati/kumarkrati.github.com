@@ -758,7 +758,7 @@ ul.solarsystem li.uranus {
     z-index: 93;
 }
 ul.solarsystem li.uranus span {
-    background: #f39c12;
+    background: #FF66CC;
     top: 7px;
     left: 295px;
 }
@@ -773,7 +773,7 @@ ul.solarsystem li.neptune {
     z-index: 92;
 }
 ul.solarsystem li.neptune span {
-    background: #FF66CC;
+    background: #77c2ec;
     top: 0px;
     left: 170px;
 }
