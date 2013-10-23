@@ -222,8 +222,9 @@ background-size: 284% 196%;
   width: 100%; 
   max-width: 1920px; 
   position: relative; 
-
-   transition: all 250ms ease
+  padding-top: 30px;
+  padding-bottom: 40px; 
+   transition: all 250ms ease;
  }
 
  #contact{
@@ -437,8 +438,7 @@ width: 1200px;
 height: 100%;
 margin: 0 auto;
 display: block;
-padding-top: 30px;
-padding-bottom: 30px;
+
 
 }
 .mac{

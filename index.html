@@ -4,6 +4,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../static/css/resume.css">
     <link rel="icon" href="../static/images/asterisk-alt.png" />
+    <title>Kumar Krati Gupta</title>
     <script type="text/javascript" src="../static/js/jquery.js"></script>
     <script type="text/javascript" src="../static/js/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="../static/js/portfolio.js"></script>
@@ -19,7 +20,7 @@
    $('.helloMenu').addClass('menuSeleceted');
     $('.scrollingDiv:not(#work)').css('height',$(window).height()+'px');
     $('#work').css('min-height',$(window).height()+'px');
-    $('.workDetails').css('height',$(window).height()+'px');
+    //$('.workDetails').css('height',$(window).height()+'px');
     /*$(".wrapOuter").center(true);*/
     center('#home');
     center('#about');
@@ -479,9 +480,9 @@ function open2(url) {
       <span style="margin-top:15px;">And here's my traditional resume</span>
   </article>
 <!--   <div class="line"></div> -->
-  <div class="dwnResume">
+  <div class="dwnResume" onclick="open2('/views/resume.html')">
 
-    Download Resume</div>
+    View Resume</div>
   </div>
 </section> 
 </div>

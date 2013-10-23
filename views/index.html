@@ -4,6 +4,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../static/css/resume.css">
     <link rel="icon" href="../static/images/asterisk-alt.png" />
+    <title>Kumar Krati Gupta</title>
     <script type="text/javascript" src="../static/js/jquery.js"></script>
     <script type="text/javascript" src="../static/js/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="../static/js/portfolio.js"></script>
@@ -17,6 +18,15 @@
       
    $("html").niceScroll({cursorborder:"#ccc",cursorcolor:"#000",boxzoom:true,touchbehavior:false}); // First scrollable DIV
    $('.helloMenu').addClass('menuSeleceted');
+    $('.scrollingDiv:not(#work)').css('height',$(window).height()+'px');
+    $('#work').css('min-height',$(window).height()+'px');
+    //$('.workDetails').css('height',$(window).height()+'px');
+    /*$(".wrapOuter").center(true);*/
+    center('#home');
+    center('#about');
+    center('#work');
+    center('#contact');
+   
    if((isScrolledIntoView('#work'))){
          rotate();
           $('.menuSeleceted').removeClass('menuSeleceted');
@@ -164,7 +174,26 @@
 
 
   });
-function isScrolledIntoView(elem)
+function center(elem){
+  var h = $(elem).height();
+    var h1 = $(elem).find('.wrapOuter').outerHeight();
+    var h2 = (h-h1)/2;
+    $(elem).find('.wrapOuter').css('margin-top',h2)+'px';
+}
+/*jQuery.fn.center = function(parent) {
+    if (parent) {
+        parent = this.parent().parent();
+    } else {
+        parent = window;
+    }
+    this.css({
+        "margin-top": ((($(parent).height() - this.outerHeight()))/2),
+        //"left": ((($(parent).width() - this.outerWidth()) / 2) + $(parent).scrollLeft() + "px")
+    });
+return this;
+}
+
+*/function isScrolledIntoView(elem)
 {
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
@@ -193,27 +222,30 @@ function open2(url) {
     </script>
   </head>
   <body>
-  	<div class="outerWrapper">
-  		<div class="wrapper">
-  			<!-- <div class="loading-wrap">
+    <div class="outerWrapper">
+      <div class="wrapper">
+        <!-- <div class="loading-wrap">
   <div class="triangle1"></div>
   <div class="triangle2"></div>
   <div class="triangle3"></div>
 </div> -->
 
-  		
+      
 <section id="home" class="scrollingDiv" data-type="background" data-speed="10">  
- <article>   
-<p style="font-size: 37px;color: #fff;position: absolute;top: 68%;width: 100%;text-align: center;">Hello I'm KK, a 22 year old<br /> Front End Developer from Rajasthan.<br /</p>
-<div class="loading"></div>                       
+ <article>  
+ <div class="wrapOuter"> 
+  <div class="loading"></div>  
+<p style="font-size: 37px;color: #fff;position: relative;width: 100%;text-align: center;margin-top:40px;">Hello I'm KK, a 22 year old<br /> Front End Developer from Rajasthan.<br /</p>
+                     
  </article>
  <div id="mouseicon" class="dynamicscroll" style="display: inline-block;">
         <div class="mousescroll1 mouseanim one"></div>
         <div class="mousescroll2 mouseanim two"></div>
         <div class="mousescroll3 mouseanim three"></div>
       </div>
+    
 </section>   
-    <div class="header" style="" >
+      <div class="header" style="" >
     <a href="#home"><p class="helloMenu" style="margin-left:30%;">HELLO</p></a>
     <a href="#about"><p class="aboutMenu">SKILLS</p></a>
     <span>*</span>
@@ -221,26 +253,10 @@ function open2(url) {
     <a href="#contact"><p class="contactMenu">CONTACT</p></a>
   </div>
 <section id="about" class="scrollingDiv" data-type="background" data-speed="10">
-   
+ 
   <article>
-<!-- <div class="techSkills">
-<p>HTML5</p>
-<p>CSS3</p>
-<p>jQuery</p>
-<p>JAVASCRIPT</p>
-<p>PYTHON</p>
-<p>JAVA</p>
-</div>
-<img class="leftBrain brain" style="left:0px;"  src="../static/images/L.png" />
-<img class="rightBrain brain" style="right:0px;" src="../static/images/R.png" />
-<div class="otherSkills">
-<p>PHOTOGRAPHY</p>
-<p>GUITAR</p>
-<p>BASKETBALL</p>
-<p>PHOTOSHOP</p>
-<p>DANCING</p>
-<p>PARTYING</p>
-</div> -->
+    <div class="wrapOuter">
+
 <div class="solarMain">
 <div class="solarOuter">
 <!-- <img src="../static/images/solar-system.png"> -->
@@ -307,13 +323,15 @@ function open2(url) {
 
 </div>
 </div>
+</div>
   </article>
 </section> 
 
 <section id="work" class="scrollingDiv" data-type="background" data-speed="10">
   <article>
+    <div class="wrapOuter">
     <div class="workDetails">
-      <div class="mac m1" onclick="open2('/views/niveagosleeveless.html')">
+      <div class="mac m1" onclick="open2('/views/niveagosleeveless.html')" style="margin-top: 0;">
         <!--   <div class="large"></div> -->
         <img class="small" src="../static/images/mac.png">
         <div class="workOut">
@@ -325,7 +343,7 @@ function open2(url) {
       </div>
       <p>NIVEA - Go Sleeveless</p>
       </div>
-      <div class="mac m2" onclick="open2('/views/officialclt20fantasyleague.html')">
+      <div class="mac m2" onclick="open2('/views/officialclt20fantasyleague.html')" style="margin-top: 0;">
         <img class="small" src="../static/images/mac.png">
         <div class="workOut">
         <img src="../static/images/work/clt202.png">
@@ -355,7 +373,7 @@ function open2(url) {
        <p>Official CLT20 Fantasy League</p>
 
       </div>
-      <div class="mac m3" onclick="open2('/views/niveaarmprint.html')">
+      <div class="mac m3" onclick="open2('/views/niveaarmprint.html')" style="margin-top: 0;">
         <img  class="small" src="../static/images/mac.png">
         <div class="workOut">
         <img src="../static/images/work/arm.jpg">
@@ -438,33 +456,37 @@ function open2(url) {
       </div>
        <p>NIVEA - Share n Shop</p>
       </div>
-
+    </div>
     </div>
   </article>
 </section> 
 <section id="contact" class="scrollingDiv" data-type="background" data-speed="10">
   <article>
     <div id="contactBg"></div>
+    <div class="wrapOuter">
     <p>CONTACT</p>
     <span>Let's work together, get in touch with me below.</span>
-    <div class="socialFb" style="margin-left: 29.5%;margin-right: 8%;" onclick="open2('https://www.facebook.com/kumarkrati')"  ></div>
+    <div class="socialOuter">
+    <div class="socialFb" style="margin-right: 8%;" onclick="open2('https://www.facebook.com/kumarkrati')"  ></div>
     <div class="socialTwit"style="margin-right: 8%;" onclick="open2('https://twitter.com/KumarKrati')"></div>
     <div class="socialLink" onclick="open2('http://www.linkedin.com/in/kumarkrati')"></div>
+    </div>
     <!-- <div class="socialTwit"></div>
     <div class="socialFb"></div> -->
    <!--  <img src="../static/images/social-linkedin.png" />
     <img src="../static/images/social-twitter.png" />
     <img src="../static/images/in.png" /> -->
-     <span>OR</span>
-      <span>Let's work together, get in touch with me below.</span>
+
+      <span style="margin-top:15px;">And here's my traditional resume</span>
   </article>
 <!--   <div class="line"></div> -->
-  <div class="dwnResume">
+  <div class="dwnResume" onclick="open2('/views/resume.html')">
 
-    Download Resume</div>
+    View Resume</div>
+  </div>
 </section> 
-
-  	</div>
+</div>
+    </div>
 </div>
 
   </body>
