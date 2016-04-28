@@ -156,8 +156,8 @@ animation-delay: 1.2s;
   border-radius: 100%;
   /*border: 10px solid #19bee1;*/
   background: url('../images/kk.jpg') no-repeat 0 0;
-background-position: -141px 0px;
-background-size: 284% 196%;
+background-position: 47% 29%;
+    background-size: 705%;
 
 }
 .loading:after {
