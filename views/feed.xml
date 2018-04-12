@@ -53,6 +53,7 @@
       ]]></content:encoded>
     </item>
        <item>
+            
       <title>5 is an Instant Article</title>
       <link>http://www.example.com/human-friendly-article-link</link>
       <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
@@ -63,6 +64,60 @@
         (The full content of your article, in HTML form.)
       ]]></content:encoded>
     </item>
-       
+       <item>
+      <title>6 is an Instant Article</title>
+      <link>http://www.example.com/human-friendly-article-link</link>
+      <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
+      <pubDate>2014-12-11T04:44:16Z</pubDate>
+      <author>Mr. Author</author>
+      <description>This is my first Instant Article. How awesome is this?</description>
+      <content:encoded><![CDATA[
+        (The full content of your article, in HTML form.)
+      ]]></content:encoded>
+    </item>
+       <item>
+      <title>7 is an Instant Article</title>
+      <link>http://www.example.com/human-friendly-article-link</link>
+      <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
+      <pubDate>2014-12-11T04:44:16Z</pubDate>
+      <author>Mr. Author</author>
+      <description>This is my first Instant Article. How awesome is this?</description>
+      <content:encoded><![CDATA[
+        (The full content of your article, in HTML form.)
+      ]]></content:encoded>
+    </item>
+       <item>
+      <title>8 is an Instant Article</title>
+      <link>http://www.example.com/human-friendly-article-link</link>
+      <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
+      <pubDate>2014-12-11T04:44:16Z</pubDate>
+      <author>Mr. Author</author>
+      <description>This is my first Instant Article. How awesome is this?</description>
+      <content:encoded><![CDATA[
+        (The full content of your article, in HTML form.)
+      ]]></content:encoded>
+    </item>
+       <item>
+      <title>9 is an Instant Article</title>
+      <link>http://www.example.com/human-friendly-article-link</link>
+      <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
+      <pubDate>2014-12-11T04:44:16Z</pubDate>
+      <author>Mr. Author</author>
+      <description>This is my first Instant Article. How awesome is this?</description>
+      <content:encoded><![CDATA[
+        (The full content of your article, in HTML form.)
+      ]]></content:encoded>
+    </item>
+       <item>
+      <title>10 is an Instant Article</title>
+      <link>http://www.example.com/human-friendly-article-link</link>
+      <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
+      <pubDate>2014-12-11T04:44:16Z</pubDate>
+      <author>Mr. Author</author>
+      <description>This is my first Instant Article. How awesome is this?</description>
+      <content:encoded><![CDATA[
+        (The full content of your article, in HTML form.)
+      ]]></content:encoded>
+    </item>
   </channel>
 </rss>
